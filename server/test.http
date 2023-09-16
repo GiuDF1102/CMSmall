@@ -1,0 +1,93 @@
+@APIURL=http://localhost:3000/api
+
+//GET getAllPublishedPages OK
+GET {{APIURL}}/pages
+
+###
+//GET getPageByID = gets page by ID and relative content OK
+GET {{APIURL}}/pages/1
+
+###
+//GET getDraftsPagesByUserID OK
+GET {{APIURL}}/pages/drafts/5
+
+###
+//PUT savePage
+PUT {{APIURL}}/pages/1
+Content-Type: application/json
+
+{
+    "authorID": 1,
+    "type": "draft",
+    "title": "nuovo titolo", 
+    "creationDate": "2019-12-12", 
+    "pubblicationDate": "2019-12-12"
+} 
+
+###
+//PUT publishPage OK
+PUT {{APIURL}}/pages/1/publish
+Content-Type: application/json
+
+{
+    "pubDate": "2019-12-12"
+}
+
+###
+//DELETE deletePage OK
+DELETE {{APIURL}}/pages/1
+
+###
+//POST addContentToPage OK
+POST {{APIURL}}/content
+Content-Type: application/json
+
+{   
+    "pageID": 8,
+    "content": {
+        "type": "header",
+        "content": "This is a header",
+        "position": 1
+    }
+}
+
+###
+//POST addImageToPage OK
+POST {{APIURL}}/images
+Content-Type: application/json
+
+{   
+    "pageID": 8,
+    "content": {
+        "type": "image",
+        "content": 3,
+        "position": 2
+    }
+}
+
+###
+//PUT saveContentInPage OK
+PUT {{APIURL}}/pages/3/content/10
+Content-Type: application/json
+
+{
+    "content": "Ho sonno",
+    "position": 3
+}
+
+
+###
+//DELETE deleteContent OK
+DELETE {{APIURL}}/content/10
+
+###
+//GET getAllImages OK
+GET {{APIURL}}/images
+
+###
+//GET getAllContentImagesByPageID OK
+GET {{APIURL}}/content/images/1
+
+###
+//GET getAllContentByPageID OK
+GET {{APIURL}}/content/1 

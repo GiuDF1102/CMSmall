@@ -1,0 +1,91 @@
+body {
+    padding-top: 50px;
+    overflow: hidden;
+  }
+  @media (max-width: 979px) {
+    body {
+      padding-top: 0px;
+    }
+  }
+
+.shadow-box {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);    
+}
+.text-color-beige {
+    color: beige !important;
+}
+
+.text-color-white {
+    color: white !important;
+}
+
+.text-color-teal {
+    color: teal !important;
+}
+
+.background-color-beige {
+    background-color: rgba(0, 128, 128, 0.2) !important;
+}
+
+.teal-color {
+    background-color: teal !important;
+    border-color: teal !important;
+}
+
+.teal-soft-color {
+    background-color: rgba(0, 128, 128, 0.2) !important;
+    border-color: rgba(0, 128, 128, 0.2) !important;
+}
+
+.teal-hard-color {
+    background-color: rgb(1, 73, 73) !important;
+    border-color: rgb(1, 73, 73) !important;
+}
+.teal-gradient {
+    background: linear-gradient(0deg, rgba(0, 128, 128, 0.2), #008080) !important;
+}
+
+.text-bold {
+    font-weight: bold !important;
+}
+
+.table-wrapper {
+    max-height: 80vh;
+    width: 100%;
+    overflow: auto;
+    display:inline-block;
+}
+
+/* Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+    box-shadow: inset 0 0 5px #dddddd;
+    border-radius: 4px;
+    border-left: 1.5px solid transparent;
+    border-right: 1.5px solid transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: teal;
+    border-radius: 4px;
+}
+
+/* sets image opacity to 1 on hover */
+.mouse-hover {
+    opacity: 1;
+}
+
+.mouse-not-hover {
+    opacity: 0.5;
+}
